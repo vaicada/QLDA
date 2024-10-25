@@ -1,0 +1,19 @@
+@use '../../../scss/abstract/variables' as *;
+@use '../../../scss/abstract/breakpoint' as *;
+.section {
+    &-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+}
+
+.list-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+}

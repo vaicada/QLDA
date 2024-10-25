@@ -1,0 +1,57 @@
+@use '../../scss/abstract/variables' as *;
+@use '../../scss/abstract/breakpoint' as *;
+@use '../../scss/abstract/mixin' as *;
+.modal {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba($color: #000000, $alpha: .4);
+    overflow: hidden;
+    visibility: hidden;
+    @include flex(center, center);
+    opacity: 0;
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+    &__body {
+        position: relative;
+        padding: 20px 40px;
+        //width: 50%;
+        max-height: 100vh;
+        max-width: 500px;
+        margin: auto;
+        background-color: $body-bg;
+        transition: transform .6s ease;
+        opacity: 0;
+        border-radius: 10px;
+        overflow-y: auto;
+        @include tablet {
+            width: 80%;
+        }
+        @include mobile {
+            width: 100%;
+            border-radius: 0;
+            height: 100%;
+            max-width: none;
+            &.active {
+                transform: translateY(0) !important;
+            }
+        }
+        &__close {
+            font-size: 1.5rem;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            cursor: pointer;
+            &:hover {
+                color: $main-color;
+            }
+        }
+        &.active {
+            opacity: 1;
+            //transform: translateY(25%);
+        }
+    }
+}

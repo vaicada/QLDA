@@ -1,0 +1,33 @@
+@use '../../scss/abstract/variables' as *;
+.reading-card {
+    display: flex;
+    width: 100%;
+    padding: 0.5rem 0;
+    gap: 20px;
+    &__img-wrap {
+        width: 32px;
+        height: 43px;
+        img {
+            max-height: 100%;
+        }
+    }
+    &__title {
+        display: -webkit-box;
+        font-weight: 600;
+        color: $txt-color;
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        &:hover {
+            color: $main-color;
+        }
+    }
+    &__chap {
+        opacity: 0.8;
+    }
+    &__content {
+        width: 100%;
+    }
+}

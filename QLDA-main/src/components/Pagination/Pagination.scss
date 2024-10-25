@@ -1,0 +1,22 @@
+@use '../../scss/abstract/variables' as *;
+.btn-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    margin: 0 4px;
+    border: none;
+    background-color: transparent;
+    &__page {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        &:hover {
+            background-color: rgba($main-color, 0.7);
+        }
+        &.page-active {
+            background-color: rgba($main-color, 0.7);
+        }
+    }
+}

@@ -1,0 +1,34 @@
+@use '../../scss/abstract/breakpoint' as *;
+.imgHero {
+    background-image: url(https://static.cdnno.com/storage/topbox/1cbb601a57998b70f8d5455742a1cabe.jpg);
+    position: absolute;
+    z-index: 0;
+    left: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 388px;
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    background-size: cover;
+    @include mobile {
+        background-image: none;
+    }
+    div {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.main {
+    padding-top: 220px;
+    @include mobile {
+        padding-top: 0;
+    }
+}
+
+.main-content {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 20px;
+    box-shadow: 0px -10px 15px -15px #777;
+}

@@ -1,0 +1,24 @@
+@use '../../scss/abstract/variables' as *;
+@use '../../scss/abstract/breakpoint' as *;
+.section {
+    margin-bottom: 2.5rem;
+    &:hover .section__heading a {
+        display: block;
+    }
+    &__title {
+        font-size: 1.25rem;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    &__heading {
+        display: flex;
+        margin-bottom: 1.5rem;
+        justify-content: space-between;
+        a {
+            margin-top: 5px;
+            display: none;
+            cursor: pointer;
+            color: $main-color;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.newest-chapter {
+    width: 100%;
+    tr {
+        td {
+            vertical-align: middle;
+            padding: 0.75rem;
+            font-size: 0.875rem;
+            &:nth-child(2) {
+                span {
+                    font-size: 0.9375rem !important;
+                }
+            }
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+}

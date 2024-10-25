@@ -1,0 +1,40 @@
+@use '../../scss/abstract/variables' as *;
+@use '../../scss/abstract/breakpoint' as *;
+.profile {
+    &__wrap {
+        min-height: 500px;
+    }
+    &__main {
+        height: 100%;
+    }
+    &__avt {
+        display: flex;
+        flex-direction: column;
+        & img {
+            border-radius: 50%;
+            width: 50%;
+            max-width: 200px;
+            margin: 20px auto;
+        }
+        input {
+            border: none;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+        @include mobile {
+            padding-bottom: 0.625rem;
+            border-bottom: 1px solid #bbb;
+            margin-bottom: 1.25rem;
+        }
+    }
+    &__main {
+        height: 100%;
+        .group-info {
+            margin-bottom: 1rem;
+            label {
+                font-weight: 600;
+                padding: 7px 0;
+            }
+        }
+    }
+}
